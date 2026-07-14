@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой новостной сайт</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>News site</h1>
+            <nav>
+                <button class="nav-btn active" data-category="all">Главная</button>
+                <button class="nav-btn" data-category="technology">Технологии</button>
+                <button class="nav-btn" data-category="sport">Спорт</button>
+                <button class="nav-btn" data-category="science">Наука</button>
+                <button class="nav-btn" data-category="business">Экономика</button>
+            </nav>
+            <div class="auth-wrapper">
+                <div id="guest-zone">
+                    <button class="nav-btn auth-btn" onclick="openModal('login-modal')">Войти</button>
+                    <button class="nav-btn auth-btn" onclick="openModal('register-modal')">Регистрация</button>
+                </div>
+                <div id="user-zone" style="display: none;">
+                    <span id="user-greeting">Привет, Гость!</span>
+                    <button class="nav-btn auth-btn" onclick="logout()">Выйти</button>
+                </div>
+            </div>
+        </div>
+        <div class="search-container">
+            <input type="text" id="news-search" placeholder="Поиск новостей...">
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 id="category-title">Последние новости</h2>
+
+        <div class="news-list">
+            <p>Загрузка новостей...</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Мой новостной сайт</p>
+        </div>
+    </footer>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('login-modal')">&times;</span>
+            <h2>Вход в аккаунт</h2>
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Пароль" required>
+                <button type="submit" class="nav-btn submit-btn">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('register-modal')">&times;</span>
+            <h2>Регистрация</h2>
+            <form id="register-form">
+                <input type="text" id="reg-username" placeholder="Имя пользователя" required>
+                <input type="email" id="reg-email" placeholder="Email" required>
+                <input type="password" id="reg-password" placeholder="Пароль" required>
+                <button type="submit" class="nav-btn submit-btn">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
