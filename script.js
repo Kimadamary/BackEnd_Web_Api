@@ -36,9 +36,8 @@ function detectCategory(article, sourceName) {
 
 async function loadNews() {
     try {
-        const response = await fetch('../../news_by_company.json');
-        if (!response.ok) throw new Error(`Ошибка: ${response.status}`);
-        const data = await response.json();
+        
+        const data = NEWS_DATA;
 
         allNewsData = Object.entries(data).flatMap(([sourceName, articles]) =>
             Array.isArray(articles) ? articles.map(article => ({
@@ -52,7 +51,7 @@ async function loadNews() {
 
         renderNews();
         setupNavButtons();
-        setupSearch(); // Запускаем поиск после загрузки данных
+        setupSearch(); 
     } catch (error) {
         console.error(error);
         const container = document.querySelector('.news-list');
@@ -61,7 +60,6 @@ async function loadNews() {
         }
     }
 }
-
 // Новая функция настройки поиска
 function setupSearch() {
     const searchInput = document.getElementById('news-search');
@@ -157,7 +155,7 @@ function setupNavButtons() {
 }
 
 // Замени порт 7145 на свой, если он отличается при запуске Web API!
-const API_BASE_URL = 'https://localhost:7145/api/users';
+const API_BASE_URL = 'https://empty-hairs-invent.loca.lt/api/users';
 
 function openModal(modalId) {
     const modal = document.getElementById(modalId);
