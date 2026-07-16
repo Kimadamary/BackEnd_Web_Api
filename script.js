@@ -155,7 +155,7 @@ function setupNavButtons() {
 }
 
 // Замени порт 7145 на свой, если он отличается при запуске Web API!
-const API_BASE_URL = 'https://bumpy-chairs-call.loca.lt/api/users';
+const API_BASE_URL = 'https://curly-zoos-give.loca.lt/api/users';
 
 function openModal(modalId) {
     const modal = document.getElementById(modalId);
