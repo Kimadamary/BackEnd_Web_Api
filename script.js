@@ -155,7 +155,7 @@ function setupNavButtons() {
 }
 
 // Замени порт 7145 на свой, если он отличается при запуске Web API!
-const API_BASE_URL = 'https://curly-zoos-give.loca.lt/api/users';
+const API_BASE_URL = 'https://fa701b3dac543e60-79-136-188-7.serveousercontent.com/api/users';
 
 function openModal(modalId) {
     const modal = document.getElementById(modalId);
