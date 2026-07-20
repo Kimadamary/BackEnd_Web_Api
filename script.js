@@ -155,7 +155,7 @@ function setupNavButtons() {
 }
 
 // Замени порт 7145 на свой, если он отличается при запуске Web API!
-const API_BASE_URL = 'https://cf4fbf5e77cc4f5f-46-147-247-0.serveousercontent.com/api/users';
+const API_BASE_URL = 'https://gertsog-api.serveousercontent.com/api/users';
 
 function openModal(modalId) {
     const modal = document.getElementById(modalId);
